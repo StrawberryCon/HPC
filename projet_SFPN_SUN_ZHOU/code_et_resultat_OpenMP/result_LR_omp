@@ -1,0 +1,45 @@
+
+
+3602556@ppti-gpu-3:~/HPC$ gcc -O3 -fopenmp -o lr_omp lr_omp.c
+3602556@ppti-gpu-3:~/HPC$ export OMP_NUM_THREADS=2
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+ le plus grand rectangle est: 18468622352330
+ 0.491142
+ le plus grand rectangle est: 702936067414
+ 12.3474
+ le plus grand rectangle est: 304059353325
+ 24.9997
+3602556@ppti-gpu-3:~/HPC$ export OMP_NUM_THREADS=4
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+ le plus grand rectangle est: 18468622352330
+ 0.295526
+ le plus grand rectangle est: 702936067414
+ 7.13811
+ le plus grand rectangle est: 304059353325
+ 14.1679
+3602556@ppti-gpu-3:~/HPC$ export OMP_NUM_THREADS=8
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+ le plus grand rectangle est: 18468622352330
+ 0.292966
+ le plus grand rectangle est: 702936067414
+ 7.08366
+ le plus grand rectangle est: 304059353325
+ 13.8172
+
+3602556@ppti-gpu-3:~/HPC$ gcc -O3 -fopenmp -o lr_omp lr_omp.c
+3602556@ppti-gpu-3:~/HPC$ export OMP_NUM_THREADS=18
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+0.288178
+6.95165
+13.762
+3602556@ppti-gpu-3:~/HPC$ export OMP_NUM_THREADS=36
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+0.292161
+6.96692
+13.895
+3602556@ppti-gpu-3:~/HPC$ export OMP_NUM_THREADS=72
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+0.264546
+6.88866
+13.5792
+

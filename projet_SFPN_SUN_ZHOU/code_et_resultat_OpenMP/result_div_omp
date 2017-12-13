@@ -1,0 +1,36 @@
+3602556@ppti-gpu-3:~/HPC$ gcc -O3 -fopenmp -o diviser diviser.c
+
+
+3602556@ppti-gpu-3:~/HPC$ vim test.sh 
+3602556@ppti-gpu-3:~/HPC$ export OMP_NUM_THREADS=2
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+0.360687
+8.5935
+17.5831
+3602556@ppti-gpu-3:~/HPC$ export OMP_NUM_THREADS=4
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+0.359536
+8.74884
+17.016
+3602556@ppti-gpu-3:~/HPC$ export OMP_NUM_THREADS=8
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+0.350292
+8.27107
+16.5327
+
+
+3602556@ppti-gpu-3:~/HPC$ export OMP_NUM_THREADS=18
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+0.354109
+8.36989
+16.8409
+3602556@ppti-gpu-3:~/HPC$ export OMP_NUM_THREADS=36
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+0.356527
+8.22283
+16.0982
+3602556@ppti-gpu-3:~/HPC$ export OMP_NUM_THREADS=72
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+0.363196
+8.37896
+16.2736

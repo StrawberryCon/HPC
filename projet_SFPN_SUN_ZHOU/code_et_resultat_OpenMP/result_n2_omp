@@ -1,0 +1,39 @@
+3602465@ppti-14-302-14:~/HPC/PROJET/code/openMP$ gcc -O3 -fopenmp N2_omp.c -o N2_omp
+3602465@ppti-14-302-14:~/HPC/PROJET/code/openMP$ export OMP_NUM_THREADS=2
+3602465@ppti-14-302-14:~/HPC/PROJET/code/openMP$ ./n2.sh
+bash: ./n2.sh: Permission non accordée
+3602465@ppti-14-302-14:~/HPC/PROJET/code/openMP$ chmod +x n2.sh
+3602465@ppti-14-302-14:~/HPC/PROJET/code/openMP$ ./n2.sh
+5.77039
+18.7434
+75.0743
+3602465@ppti-14-302-14:~/HPC/PROJET/code/openMP$ export OMP_NUM_THREADS=4
+3602465@ppti-14-302-14:~/HPC/PROJET/code/openMP$ ./n2.sh
+2.46874
+9.81155
+39.2351
+3602465@ppti-14-302-14:~/HPC/PROJET/code/openMP$ export OMP_NUM_THREADS=8
+3602465@ppti-14-302-14:~/HPC/PROJET/code/openMP$ ./n2.sh
+2.33174
+9.3131
+37.3033
+
+
+3602556@ppti-gpu-3:~/HPC$ gcc -O3 -fopenmp -o N2 N2.c
+3602556@ppti-gpu-3:~/HPC$ export OMP_NUM_THREADS=18
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+0.782565
+2.57461
+10.1278
+3602556@ppti-gpu-3:~/HPC$ export OMP_NUM_THREADS=36
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+0.420715
+1.3693
+5.21716
+3602556@ppti-gpu-3:~/HPC$ export OMP_NUM_THREADS=72
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+0.388116
+1.25978
+4.83303
+
+

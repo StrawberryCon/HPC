@@ -1,0 +1,63 @@
+3602556@ppti-gpu-3:~/HPC$ vim nn3.c
+3602556@ppti-gpu-3:~/HPC$ gcc -O3 -o nn3 nn3.c
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+nn3
+ ouvert le fichier
+1000000000 1000000000 1024
+ le plus grand rectangle est: 10892570171300545
+Temps total de calcul : 0.83787 sec
+ 0.83787
+ ouvert le fichier
+1000000000 1000000000 2048
+ le plus grand rectangle est: 5413902030562024
+Temps total de calcul : 5.31216 sec
+ 5.31216
+ ouvert le fichier
+1000000000 1000000000 4096
+ le plus grand rectangle est: 2599351140617435
+Temps total de calcul : 40.9931 sec
+ 40.9931
+ ouvert le fichier
+1000000000 1000000000 8192
+ le plus grand rectangle est: 1427539857008412
+Temps total de calcul : 324.132 sec
+ 324.132
+3602556@ppti-gpu-3:~/HPC$ vim nn2.c
+3602556@ppti-gpu-3:~/HPC$ gcc -O3 -o nn2 nn2.c
+3602556@ppti-gpu-3:~/HPC$ vim test.sh
+3602556@ppti-gpu-3:~/HPC$ vim test.sh
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+nn2
+ le plus grand rectangle est: 112992064157375
+ 11.4634
+ le plus grand rectangle est: 63414987166050
+ 45.4632
+ le plus grand rectangle est: 31082612217280
+ 181.338
+3602556@ppti-gpu-3:~/HPC$ vim llr.c
+3602556@ppti-gpu-3:~/HPC$ gcc -O3 -o llr llr.c
+3602556@ppti-gpu-3:~/HPC$ vim test.sh
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+ le plus grand rectangle est: 18468622352330
+ 0.463809
+ le plus grand rectangle est: 702936067414
+ 12.3455
+ le plus grand rectangle est: 304059353325
+ 24.9187
+
+3602556@ppti-gpu-3:~/HPC$ vim ddiv.c
+3602556@ppti-gpu-3:~/HPC$ gcc -O3 -o ddiv ddiv.c
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+1000000000 1000000000 1048576
+ le plus grand rectangle est: 18468622352330
+Temps total de calcul : 0.342994 sec
+ 0.342994
+1000000000 1000000000 33554432
+ le plus grand rectangle est: 702936067414
+Temps total de calcul : 26.6458 sec
+26.6458
+1000000000 1000000000 67108864
+ le plus grand rectangle est: 304059353325
+Temps total de calcul : 46.9458 sec
+46.9458
+

@@ -1,0 +1,59 @@
+3602465@ppti-14-302-14:~/HPC/PROJET/code/openMP$ gcc -O3 -fopenmp N3_omp.c -o N3_omp
+3602465@ppti-14-302-14:~/HPC/PROJET/code/openMP$ export OMP_NUM_THREADS=2
+3602465@ppti-14-302-14:~/HPC/PROJET/code/openMP$ ./n3.sh
+bash: ./n3.sh: Permission non accordée
+3602465@ppti-14-302-14:~/HPC/PROJET/code/openMP$ chmod +x
+chmod: opérande manquant après « +x »
+Saisissez « chmod --help » pour plus d'informations.
+3602465@ppti-14-302-14:~/HPC/PROJET/code/openMP$ chmod +x n3.sh
+3602465@ppti-14-302-14:~/HPC/PROJET/code/openMP$ ./n3.sh
+ le plus grand rectangle est: 10892570171300545
+ 0.482311
+ le plus grand rectangle est: 5413902030562024
+ 2.74547
+ le plus grand rectangle est: 2275807688477216
+ 22.4607
+ le plus grand rectangle est: 1427539857008412
+ 163.03
+3602465@ppti-14-302-14:~/HPC/PROJET/code/openMP$ export OMP_NUM_THREADS=4
+3602465@ppti-14-302-14:~/HPC/PROJET/code/openMP$ ./n3.sh
+ le plus grand rectangle est: 10892570171300545
+ 0.235916
+ le plus grand rectangle est: 5413902030562024
+ 1.38478
+ le plus grand rectangle est: 2275807688477216
+ 10.09755
+ le plus grand rectangle est: 1427539857008412
+ 85.8108
+3602465@ppti-14-302-14:~/HPC/PROJET/code/openMP$ export OMP_NUM_THREADS=8
+3602465@ppti-14-302-14:~/HPC/PROJET/code/openMP$ ./n3.sh
+ le plus grand rectangle est: 10892570171300545
+ 0.182864
+ le plus grand rectangle est: 5413902030562024
+ 0.646033
+ le plus grand rectangle est: 2275807688477216
+ 5.05071
+ le plus grand rectangle est: 1427539857008412
+ 45.0077
+
+
+3602556@ppti-gpu-3:~/HPC$ gcc -O3 -fopenmp -o N3 N3.c
+3602556@ppti-gpu-3:~/HPC$ export OMP_NUM_THREADS=18
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+0.0576849
+0.348407
+2.33544
+15.6759
+3602556@ppti-gpu-3:~/HPC$ export OMP_NUM_THREADS=36
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+0.0338058
+0.229692
+1.06861
+9.91898
+3602556@ppti-gpu-3:~/HPC$ export OMP_NUM_THREADS=72
+3602556@ppti-gpu-3:~/HPC$ ./test.sh
+0.0447459
+0.18237
+1.05809
+9.08104
+3602556@ppti-gpu-3:~/HPC$ 
